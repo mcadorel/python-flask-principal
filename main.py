@@ -6,8 +6,10 @@ from flask.ext.principal import Identity, AnonymousIdentity, identity_changed, i
 
 from functools import wraps
 
+
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "123123123"
+app.config["SERVER_NAME"] = "127.0.0.1:5007"
 
 login_manager = LoginManager()
 login_manager.init_app(app)
